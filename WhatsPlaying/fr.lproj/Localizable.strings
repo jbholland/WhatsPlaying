@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  WhatsPlaying
+
+  Created by John Holland on 5/1/23.
+  
+*/
+"main_heading" = "Entrée Wikipédia sur ce qui est en cours de lecture :";
+"song" = "Chanson:";
+"by" = "De:";
+"album" = "Album:";
+

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  WhatsPlaying
+
+  Created by John Holland on 5/1/23.
+  
+*/
+"main_heading" = "Wikipedia entries on what's playing:";
+"song" = "Song:" ;
+

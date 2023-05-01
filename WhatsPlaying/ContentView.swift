@@ -57,17 +57,28 @@ func getCurrPlaying()->(title:String, artist: String, album: String) {
     }
 }
 
-func getWikipediaURL()->String {
-    let preferredLanguage : String = Locale.current.language.languageCode?.identifier ?? "en"
-    //var languageCode = "en"
+func getPreferredLanguage()->String {
+    
 
+    let preferredLanguage = ((UserDefaults.standard.object(forKey: "AppleLanguages") as? NSArray)?[0] as? String ?? "en-")
+    
+   
+        let index1 = preferredLanguage.startIndex
+        let index2 = preferredLanguage.firstIndex(of:"-") ?? preferredLanguage.endIndex
+        var twoCharLang =  String(preferredLanguage[index1..<index2])
+    if twoCharLang.count > 2 {
+        //something went wrong
+        twoCharLang = "en"
+    }
+    
    
     
-    return "https://" + preferredLanguage + ".wikipedia.org/wiki/"
+    return twoCharLang
 }
 
-let wikiUrl = "https://en.wikipedia.org"
-let wikiWikiUrl =   getWikipediaURL()
+
+let wikiUrl =   "https://" + getPreferredLanguage() + ".wikipedia.org/wiki/"
+let safeUrl = URL(string:"https://en.wikipedia.org")!
 
 
 
@@ -91,7 +102,7 @@ struct ContentView: View {
     @Environment(\.scenePhase) var scenePhase
     var body: some View {
         VStack {
-            Text("Wikipedia entries on what's playing:").bold().font(.title)
+            Text(NSLocalizedString("main_heading" , comment: "Wikipedia entries on what's playing:")).bold().font(.title)
                 .onChange(of: scenePhase) { newPhase in
                     if newPhase == .inactive {
                         print("Inactive")
@@ -105,9 +116,9 @@ struct ContentView: View {
                         currentArtistForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentArtist))
                         currentAlbumForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentAlbum))
                         
-                        currentTitleURLForWiki = URL(string:wikiWikiUrl + currentTitleForWiki) ?? URL(string:"https://www.yahoo.com")!
-                        currentArtistURLForWiki = URL(string:wikiWikiUrl + currentArtistForWiki) ?? URL(string:"https://www.cnn.com")!
-                        currentAlbumURLForWiki = URL(string:wikiWikiUrl + currentAlbumForWiki) ?? URL(string:"https://google.com")!
+                        currentTitleURLForWiki = URL(string:wikiUrl + currentTitleForWiki) ?? safeUrl
+                        currentArtistURLForWiki = URL(string:wikiUrl + currentArtistForWiki) ?? safeUrl
+                        currentAlbumURLForWiki = URL(string:wikiUrl + currentAlbumForWiki)  ?? safeUrl
                         
                         
                     } else if newPhase == .background {
@@ -116,17 +127,17 @@ struct ContentView: View {
                 }
             
             
-            Text("Song:")
+            Text(NSLocalizedString("song", comment:"Song:"))
             Button(currentTitle) {
                     openURL(currentTitleURLForWiki)
             }
-            Text("By:")
+            Text(NSLocalizedString("by", comment:"By:"))
             
             Button(currentArtist) {
                     openURL(currentArtistURLForWiki)
             }
             
-            Text("From album:")
+            Text(NSLocalizedString("album", comment:"Album:"))
             Button(currentAlbum) {
                     openURL(currentAlbumURLForWiki)
             }
