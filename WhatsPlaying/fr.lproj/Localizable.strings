@@ -5,8 +5,8 @@
   Created by John Holland on 5/1/23.
   
 */
-"main_heading" = "Entrée Wikipédia sur ce qui est en cours de lecture :";
-"song" = "Chanson:";
+"main_heading" = "Entrées Wikipédia sur ce qui est en cours de lecture :";
+"song" = "Morceau:";
 "by" = "De:";
 "album" = "Album:";
 

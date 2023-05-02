@@ -7,4 +7,6 @@
 */
 "main_heading" = "Wikipedia entries on what's playing:";
 "song" = "Song:" ;
+"by" = "By:" ;
+"album" = "Album:";
 

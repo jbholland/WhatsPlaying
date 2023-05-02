@@ -57,33 +57,19 @@ func getCurrPlaying()->(title:String, artist: String, album: String) {
     }
 }
 
-func getPreferredLanguage()->String {
+func getPreferredLanguage(locale:Locale)->String {
+    let langCode = String(locale.identifier.dropLast(3))
+    return langCode
     
-
-    let preferredLanguage = ((UserDefaults.standard.object(forKey: "AppleLanguages") as? NSArray)?[0] as? String ?? "en-")
     
-   
-        let index1 = preferredLanguage.startIndex
-        let index2 = preferredLanguage.firstIndex(of:"-") ?? preferredLanguage.endIndex
-        var twoCharLang =  String(preferredLanguage[index1..<index2])
-    if twoCharLang.count > 2 {
-        //something went wrong
-        twoCharLang = "en"
-    }
-    
-   
-    
-    return twoCharLang
 }
 
 
-let wikiUrl =   "https://" + getPreferredLanguage() + ".wikipedia.org/wiki/"
-let safeUrl = URL(string:"https://en.wikipedia.org")!
 
 
 
 struct ContentView: View {
-    
+    @Environment(\.locale) var locale
     @Environment(\.openURL) private var openURL
     
     @State var currentTitle = "Nothing Playing"
@@ -92,29 +78,34 @@ struct ContentView: View {
     @State var currentTitleForWiki = "initial"
     @State var currentArtistForWiki = "initial_artist"
     @State var currentAlbumForWiki  = "initial_album"
+    let safeUrl = URL(string:"https://en.wikipedia.org")!
+    @State var currentTitleURLForWiki = URL(string:"https://en.wikipedia.org")!
+    @State var currentArtistURLForWiki = URL(string:"https://en.wikipedia.org")!
+    @State var currentAlbumURLForWiki = URL(string:"https://en.wikipedia.org")!
     
-    @State var currentTitleURLForWiki = URL(string:wikiUrl)!
     
-    @State var currentArtistURLForWiki = URL(string:wikiUrl)!
-    
-    @State var currentAlbumURLForWiki = URL(string:wikiUrl)!
+    @State var wikiUrl =  "https://en.wikipedia.org/wiki/"
     
     @Environment(\.scenePhase) var scenePhase
     var body: some View {
         VStack {
-            Text(NSLocalizedString("main_heading" , comment: "Wikipedia entries on what's playing:")).bold().font(.title)
+
+            Spacer()
+            Text(NSLocalizedString("main_heading" , comment: "Wikipedia entries on what's playing:")).bold().font(.title).multilineTextAlignment(.center).padding()
                 .onChange(of: scenePhase) { newPhase in
                     if newPhase == .inactive {
                         print("Inactive")
                     } else if newPhase == .active {
                         print("Active")
+                        wikiUrl =   "https://" + getPreferredLanguage(locale: locale) + ".wikipedia.org/wiki/"
+                          
                         currentTitle = getCurrPlaying().title
                         currentArtist = getCurrPlaying().artist
                         currentAlbum = getCurrPlaying().album
                         
-                        currentTitleForWiki = fixStringForURL(input: cleanUpStringWithRegexes(input:currentTitle))
-                        currentArtistForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentArtist))
-                        currentAlbumForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentAlbum))
+                        let currentTitleForWiki = fixStringForURL(input: cleanUpStringWithRegexes(input:currentTitle))
+                        let currentArtistForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentArtist))
+                        var currentAlbumForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentAlbum))
                         
                         currentTitleURLForWiki = URL(string:wikiUrl + currentTitleForWiki) ?? safeUrl
                         currentArtistURLForWiki = URL(string:wikiUrl + currentArtistForWiki) ?? safeUrl
@@ -126,22 +117,22 @@ struct ContentView: View {
                     }
                 }
             
-            
-            Text(NSLocalizedString("song", comment:"Song:"))
+    
+            Text(NSLocalizedString("song", comment:"Song:")).font(.title)
             Button(currentTitle) {
-                    openURL(currentTitleURLForWiki)
-            }
-            Text(NSLocalizedString("by", comment:"By:"))
+                openURL(currentTitleURLForWiki)
+            }.font(.title)
+            Text(NSLocalizedString("by", comment:"By:")).font(.title)
             
             Button(currentArtist) {
-                    openURL(currentArtistURLForWiki)
-            }
+                openURL(currentArtistURLForWiki)
+            }.font(.title)
             
-            Text(NSLocalizedString("album", comment:"Album:"))
+            Text(NSLocalizedString("album", comment:"Album:")).font(.title)
             Button(currentAlbum) {
-                    openURL(currentAlbumURLForWiki)
-            }
-            
+                openURL(currentAlbumURLForWiki)
+            }.font(.title)
+            Spacer()
         }
     }
 }
