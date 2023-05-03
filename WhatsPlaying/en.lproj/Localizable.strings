@@ -9,4 +9,8 @@
 "song" = "Song:" ;
 "by" = "By:" ;
 "album" = "Album:";
+"cannotFindSong" = "Wikipedia cannot find this song.";
+"cannotFindArtist" = "Wikipedia cannot find this artist";
+"cannotFindAlbum" = "Wikipedia cannot find this album";
+
 

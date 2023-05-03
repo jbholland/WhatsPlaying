@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF49CED22A02D8A1000097C5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49CED12A02D8A1000097C5 /* Model.swift */; };
 		BF4C571729FFFE260084C5C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF4C571929FFFE260084C5C8 /* Localizable.strings */; };
 		BF4CF1E429FC5ED500DE2EA9 /* WhatsPlayingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4CF1E329FC5ED500DE2EA9 /* WhatsPlayingApp.swift */; };
 		BF4CF1E629FC5ED500DE2EA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4CF1E529FC5ED500DE2EA9 /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF49CED12A02D8A1000097C5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BF4C571829FFFE260084C5C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF4C571A29FFFE2F0084C5C8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF4C571B29FFFE300084C5C8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				BF4C571929FFFE260084C5C8 /* Localizable.strings */,
 				BF4CF1E729FC5ED700DE2EA9 /* Assets.xcassets */,
 				BF4CF1E929FC5ED700DE2EA9 /* Preview Content */,
+				BF49CED12A02D8A1000097C5 /* Model.swift */,
 			);
 			path = WhatsPlaying;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF49CED22A02D8A1000097C5 /* Model.swift in Sources */,
 				BF4CF1E629FC5ED500DE2EA9 /* ContentView.swift in Sources */,
 				BF4CF1E429FC5ED500DE2EA9 /* WhatsPlayingApp.swift in Sources */,
 			);

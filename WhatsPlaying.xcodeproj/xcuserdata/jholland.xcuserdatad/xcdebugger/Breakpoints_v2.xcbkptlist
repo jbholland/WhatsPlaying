@@ -14,10 +14,42 @@
             filePath = "WhatsPlaying/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2F9B9A36-E371-4570-8910-6B20DC0F911E - 57d000cc0bc2357"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.alert&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.StringProtocol, &#x3c4;_1_1: SwiftUI.View&gt;(_: &#x3c4;_1_0, isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, actions: () -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.alert&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.StringProtocol, &#x3c4;_1_1: SwiftUI.View&gt;(_: &#x3c4;_1_0, isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, actions: () -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in WhatsPlaying.ContentView.body.getter : some"
+                  moduleName = "WhatsPlaying"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "2F9B9A36-E371-4570-8910-6B20DC0F911E - 57d000cc0bc2357"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.alert&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.StringProtocol, &#x3c4;_1_1: SwiftUI.View&gt;(_: &#x3c4;_1_0, isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, actions: () -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.alert&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.StringProtocol, &#x3c4;_1_1: SwiftUI.View&gt;(_: &#x3c4;_1_0, isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, actions: () -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in WhatsPlaying.ContentView.body.getter : some"
+                  moduleName = "WhatsPlaying"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "452">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,8 +62,8 @@
             filePath = "WhatsPlaying/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -39,208 +71,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FFC04302-D64B-4F40-B42B-272912FB3035"
-            shouldBeEnabled = "No"
+            uuid = "04544372-4FA1-4F0E-A7A2-3C5434897A7D"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhatsPlaying/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "checkIfWikiCanOpen(url:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "FFC04302-D64B-4F40-B42B-272912FB3035 - 89df5a58fc3e83bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WhatsPlaying.checkWikiMatch(url: Foundation.URL) -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "FFC04302-D64B-4F40-B42B-272912FB3035 - 3677535f2cf3cf8b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WhatsPlaying.checkIfWikiCanOpen(url: Foundation.URL) async throws -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "160">
-               </Location>
-            </Locations>
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7D1FC541-D586-41DC-9CDD-99446B187EE7"
-            shouldBeEnabled = "No"
+            uuid = "7593C783-8B30-418A-A8A1-ED62F1845216"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhatsPlaying/ContentView.swift"
+            filePath = "WhatsPlaying/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "checkIfWikiCanOpen(url:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "7D1FC541-D586-41DC-9CDD-99446B187EE7 - 89df5a58fc3e83bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WhatsPlaying.checkWikiMatch(url: Foundation.URL) -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "7D1FC541-D586-41DC-9CDD-99446B187EE7 - 3677535f2cf3cfa8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WhatsPlaying.checkIfWikiCanOpen(url: Foundation.URL) async throws -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "336">
-               </Location>
-            </Locations>
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "getCurrPlayingFromMusicPlayer()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "510458E5-35EE-4A5C-AD80-CBEAC892B27C"
-            shouldBeEnabled = "No"
+            uuid = "8B5CFB05-3E4D-42CE-A76E-38DF54F9B4F9"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhatsPlaying/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "checkIfWikiCanOpen(url:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "510458E5-35EE-4A5C-AD80-CBEAC892B27C - 89df5a58fc3e831c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WhatsPlaying.checkWikiMatch(url: Foundation.URL) -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "264">
-               </Location>
-               <Location
-                  uuid = "510458E5-35EE-4A5C-AD80-CBEAC892B27C - 89df5a58fc3e831c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WhatsPlaying.checkWikiMatch(url: Foundation.URL) -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "388">
-               </Location>
-               <Location
-                  uuid = "510458E5-35EE-4A5C-AD80-CBEAC892B27C - 3677535f2cf3cf0f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WhatsPlaying.checkIfWikiCanOpen(url: Foundation.URL) async throws -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "556">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CDD3BF63-4421-4F00-A165-C23F837D70F0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhatsPlaying/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "checkIfWikiCanOpen(url:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "CDD3BF63-4421-4F00-A165-C23F837D70F0 - 89df5a58fc3e80e1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WhatsPlaying.checkWikiMatch(url: Foundation.URL) -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "548">
-               </Location>
-               <Location
-                  uuid = "CDD3BF63-4421-4F00-A165-C23F837D70F0 - 3677535f2cf3ccf2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WhatsPlaying.checkIfWikiCanOpen(url: Foundation.URL) async throws -&gt; Swift.Bool"
-                  moduleName = "WhatsPlaying"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jholland/Desktop/HackingWithSwift/WhatsPlaying/WhatsPlaying/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "656">
-               </Location>
-            </Locations>
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "ContentView"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -9,4 +9,6 @@
 "song" = "Morceau:";
 "by" = "De:";
 "album" = "Album:";
-
+"cannotFindSong" = "Wikipedia ne trouve pas cette chanson.";
+"cannotFindArtist" = "Wikipedia ne trouve pas cet artiste.";
+"cannotFindAlbum" = "Wikipedia ne trouve pas cet album.";
