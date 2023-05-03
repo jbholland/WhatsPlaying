@@ -8,6 +8,27 @@
 import SwiftUI
 import MediaPlayer
 
+func checkIfWikiCanOpen(url: URL) async  throws ->Bool {
+    let url = url
+    let (_, response) = try await URLSession.shared.data(from: url)
+    
+    
+    if let httpResponse = response as? HTTPURLResponse {
+        let statusCode = httpResponse.statusCode
+        print(statusCode)
+        if (statusCode == 404) {
+            return false
+        }
+        else {
+            return  true
+        }
+    }
+   // something bad happened
+    return false
+}
+           
+
+
 func cleanUpStringWithRegexes(input:String) ->String {
     var output = input
     
@@ -83,7 +104,12 @@ struct ContentView: View {
     @State var currentArtistURLForWiki = URL(string:"https://en.wikipedia.org")!
     @State var currentAlbumURLForWiki = URL(string:"https://en.wikipedia.org")!
     
-    
+    @State var cantOpenArtist = false
+    @State var showArtistCantOpen = false
+    @State var cantOpenTitle = false
+    @State var showTitleCantOpen = false
+    @State var cantOpenAlbum = false
+    @State var showAlbumCantOpen = false
     @State var wikiUrl =  "https://en.wikipedia.org/wiki/"
     
     @Environment(\.scenePhase) var scenePhase
@@ -91,8 +117,15 @@ struct ContentView: View {
         VStack {
 
             Spacer()
+           
             Text(NSLocalizedString("main_heading" , comment: "Wikipedia entries on what's playing:")).bold().font(.title).multilineTextAlignment(.center).padding()
-                .onChange(of: scenePhase) { newPhase in
+                .onChange(of: scenePhase) {
+                    newPhase in
+                    Task {
+                        cantOpenArtist = try await !checkIfWikiCanOpen(url: currentArtistURLForWiki)
+                        cantOpenTitle = try await !checkIfWikiCanOpen(url: currentTitleURLForWiki)
+                        cantOpenAlbum = try await !checkIfWikiCanOpen(url: currentAlbumURLForWiki)
+                    }
                     if newPhase == .inactive {
                         print("Inactive")
                     } else if newPhase == .active {
@@ -105,7 +138,7 @@ struct ContentView: View {
                         
                         let currentTitleForWiki = fixStringForURL(input: cleanUpStringWithRegexes(input:currentTitle))
                         let currentArtistForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentArtist))
-                        var currentAlbumForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentAlbum))
+                        let currentAlbumForWiki = fixStringForURL(input:cleanUpStringWithRegexes(input: currentAlbum))
                         
                         currentTitleURLForWiki = URL(string:wikiUrl + currentTitleForWiki) ?? safeUrl
                         currentArtistURLForWiki = URL(string:wikiUrl + currentArtistForWiki) ?? safeUrl
@@ -116,21 +149,52 @@ struct ContentView: View {
                         print("Background")
                     }
                 }
-            
+               
     
             Text(NSLocalizedString("song", comment:"Song:")).font(.title)
             Button(currentTitle) {
-                openURL(currentTitleURLForWiki)
+                if  !cantOpenTitle{
+               openURL(currentTitleURLForWiki)
+                } else {
+                    showTitleCantOpen = true
+                    print("can't open this  song")
+                }
             }.font(.title)
+                .alert("Wikipedia cannot open this song", isPresented: $showTitleCantOpen){
+                    Button("OK", role: .cancel) {
+                        showTitleCantOpen = false
+                    }
+                }
             Text(NSLocalizedString("by", comment:"By:")).font(.title)
             
             Button(currentArtist) {
-                openURL(currentArtistURLForWiki)
+                    if  !cantOpenArtist{
+                   openURL(currentArtistURLForWiki)
+                    } else {
+                        showArtistCantOpen = true
+                        print("can't open this  artist")
+                    }
             }.font(.title)
+                .alert("Wikipedia cannot open this artist", isPresented: $showArtistCantOpen){
+                    Button("OK", role: .cancel) {
+                        showArtistCantOpen = false
+                    }
+                }
+            
             
             Text(NSLocalizedString("album", comment:"Album:")).font(.title)
             Button(currentAlbum) {
-                openURL(currentAlbumURLForWiki)
+                    if  !cantOpenAlbum{
+               openURL(currentAlbumURLForWiki)
+                } else {
+                    showAlbumCantOpen = true
+                    print("can't open this album")
+                }
+        }.font(.title)
+            .alert("Wikipedia cannot open this album", isPresented: $showAlbumCantOpen){
+                Button("OK", role: .cancel) {
+                    showAlbumCantOpen = false
+                }
             }.font(.title)
             Spacer()
         }
