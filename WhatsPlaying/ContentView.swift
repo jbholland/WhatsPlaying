@@ -18,7 +18,6 @@ func getPreferredLanguage(locale:Locale)->String {
 
 
 
-
 struct ContentView: View {
     
     @StateObject private var model = Model()
@@ -69,6 +68,7 @@ struct ContentView: View {
                         showTitleCantOpen = false
                     }
                 }
+            .buttonStyle(.borderedProminent)
             Text(NSLocalizedString("by", comment:"By:")).font(.title)
             Button(model.currentArtist) {
                 if  model.canOpenArtist{
@@ -83,6 +83,7 @@ struct ContentView: View {
                         showArtistCantOpen = false
                     }
                 }
+            .buttonStyle(.borderedProminent)
             Text(NSLocalizedString("album", comment:"Album:")).font(.title)
             Button(model.currentAlbum) {
                 if  model.canOpenAlbum{
@@ -96,7 +97,8 @@ struct ContentView: View {
                     Button("OK", role: .cancel) {
                         showAlbumCantOpen = false
                     }
-                }.font(.title)
+                }
+            .buttonStyle(.borderedProminent)
             Spacer()
         }
     }
